@@ -1,0 +1,231 @@
+/* ========== GLOBAL STYLES ========== */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --primary-color: #5cb85c; /* Health/Nutrition Green */
+  --secondary-color: #2c3e50; /* Dark contrast for text */
+  --accent-color: #f4f9f4; /* Light soothing background */
+  --white: #fff;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ========== HEADER ========== */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  z-index: 1000;
+}
+
+/* Hamburger Menu */
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+/* Logo */
+header .logo img {
+  height: 55px;
+  width: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Bar */
+.mobile-social{
+    display: none;
+}
+.nav-bar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: var(--primary-color);
+}
+
+.nav-bar a:hover::after {
+  width: 100%;
+}
+
+/* Close Button (for mobile) */
+.close-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ========== SOCIAL ICONS ========== */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social a {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* ========== MOBILE MENU OVERLAY ========== */
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Hamburger Menu Visible */
+  .menu-btn {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Fullscreen Overlay Menu (Transparent + Animated) */
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-bar.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Nav links inside overlay */
+  .nav-bar a {
+    color: #5cb85c;
+    font-size: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .nav-bar a:hover {
+    color: var(--primary-color);
+    transform: scale(1.15);
+  }
+  .nav-bar a:hover::after {
+  width: 0%;
+}
+
+  /* Close button inside overlay */
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 3rem;
+    color: #5cb85c;
+    cursor: pointer;
+  }
+
+  /* Mobile Social Icons */
+  .mobile-social {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .mobile-social a {
+    color: #5cb85c;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+
+  .mobile-social a:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+
+  /* Hide desktop social icons */
+  .social {
+    display: none;
+  }
+
+  header .logo img {
+    height: 45px;
+  }
+}
+/* ========== Sec1 ========== */
+.main-img img{
+     display: flex;
+    width: 100%;
+}
+.sec-1 h1{
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}

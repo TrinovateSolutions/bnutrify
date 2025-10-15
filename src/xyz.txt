@@ -1,0 +1,13 @@
+/* ========== MAIN & FOOTER PLACEHOLDERS ========== */
+main {
+  min-height: 80vh;
+  padding: 50px 40px;
+}
+
+footer {
+  background: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
