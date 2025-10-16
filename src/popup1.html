@@ -20,7 +20,7 @@
               id="name"
               name="name"
               placeholder="Your Name"
-              required
+              required onchange="validateForm()"
             />
           </div>
 
@@ -31,7 +31,7 @@
               id="email"
               name="email"
               placeholder="Your Email"
-              required
+              required onchange="validateForm()"
             />
           </div>
 
@@ -42,36 +42,34 @@
               id="phone"
               name="phone"
               placeholder="Your Phone Number"
-              required
+              required onchange="validateForm()"
             />
           </div>
 
           <div class="form-group">
             <label for="date">Date of Appointment</label>
-            <input type="date" id="date" name="date" required />
+            <input type="date" id="date" name="date" required onchange="validateForm()" />
           </div>
 
           <div class="form-group">
             <label for="time">Time of Appointment</label>
-            <select id="time" name="time" required></select>
+            <select id="time" name="time" required onchange="validateForm()"></select>
           </div>
 
           <button
             type="button"
             class="submit-btn"
+            id="proceedBtn"
             onclick="showPayment()"
+            disabled
           >
             Proceed to Payment
           </button>
         </form>
 
         <!-- STEP 2: Payment Section -->
-        <div id="paymentSection" style="display: none;">
-          <button
-            type="button"
-            class="back-btn"
-            onclick="showAppointment()"
-          >
+        <div id="paymentSection" style="display: none">
+          <button type="button" class="back-btn" onclick="showAppointment()">
             ← Back
           </button>
 
@@ -80,7 +78,9 @@
 
           <!-- Upload Screenshot Section -->
           <div class="upload-section">
-            <label for="paymentProof" class="upload-label">Upload Payment Screenshot:</label>
+            <label for="paymentProof" class="upload-label"
+              >Upload Payment Screenshot:</label
+            >
             <input
               type="file"
               id="paymentProof"
@@ -90,7 +90,7 @@
             />
           </div>
 
-          <button type="submit" class="submit-btn">Submit Payment</button>
+          <button type="button" class="submit-btn" onclick="submitAppointment()">Submit Payment</button>
         </div>
       </div>
     </div>

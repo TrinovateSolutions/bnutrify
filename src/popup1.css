@@ -155,3 +155,109 @@
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+
+/* ---------- Mobile Responsive Styles ---------- */
+@media (max-width: 768px) {
+  /* Popup Overlay */
+  .popup-overlay {
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  /* Popup Box */
+  .popup-box {
+    width: 95%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 80px auto;
+    font-size: 0.95rem;
+  }
+
+  .popup-box h2 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+
+  /* Close Button */
+  .close-btns {
+    font-size: 36px;
+    top: -5px;
+    right: 10px;
+  }
+
+  /* Form Group */
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  /* Submit & Back Buttons */
+  .submit-btn,
+  .back-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+    border-radius: 8px;
+  }
+
+  /* QR and Upload Sections */
+  .qr {
+    width: 140px;
+    height: 140px;
+  }
+
+  .upload-section {
+    margin-top: 12px;
+  }
+
+  .upload-label {
+    font-size: 0.9rem;
+  }
+
+  #paymentProof {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  /* Payment Options */
+  .payment-options {
+    gap: 8px;
+    margin: 15px 0;
+  }
+}
+
+/* ---------- Extra Small Devices (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  .popup-box {
+    width: 90%;
+    max-width: 300px;
+    padding: 18px;
+    margin: 60px auto;
+  }
+
+  .popup-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .qr {
+    width: 120px;
+    height: 120px;
+  }
+
+  .submit-btn,
+  .back-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
