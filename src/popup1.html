@@ -12,7 +12,7 @@
         <h2>Book an Appointment</h2>
 
         <!-- STEP 1: Appointment Form -->
-        <form id="appointmentForm">
+       <form id="appointmentForm" method="POST" enctype="multipart/form-data" action="/src/send_mail.php">
           <div class="form-group">
             <label for="name">Full Name</label>
             <input
