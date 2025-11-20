@@ -583,6 +583,7 @@ header .logo img:hover {
   grid-template-columns: 88px 1fr;
   align-items: center;
   background: var(--white);
+  height: 220px;
   padding: 0.9rem;
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
