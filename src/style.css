@@ -63,7 +63,7 @@ header .logo img:hover {
 }
 .nav-bar {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -443,7 +443,7 @@ header .logo img:hover {
 }
 
 /* Responsive Tweaks */
-@media (min-width: 768px) {
+@media (min-width: 560px) {
   .about-content h2 {
     font-size: 2rem;
   }
@@ -525,7 +525,7 @@ header .logo img:hover {
 }
 
 /* ========== Responsive Design ========== */
-@media (max-width: 768px) {
+@media (max-width: 560px) {
   .cta-section {
     grid-template-columns: 1fr;
     text-align: center;
@@ -542,6 +542,12 @@ header .logo img:hover {
 
   .cta-content p {
     font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 561px) {
+  .cta-section{
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -570,10 +576,10 @@ header .logo img:hover {
 
 /* grid */
 .home-reviews-grid {
-  display: grid;
-  gap: 4rem;
+  display: flex;
+  gap: 5rem;
   grid-template-columns: 1fr;
-  align-items: start;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
@@ -584,8 +590,10 @@ header .logo img:hover {
   align-items: center;
   background: var(--white);
   height: 220px;
+  max-width: 500px;
   padding: 0.9rem;
   border-radius: 10px;
+  gap: 1rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
@@ -624,6 +632,7 @@ header .logo img:hover {
   color: #444;
   font-size: 0.95rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* CTA button */
@@ -645,16 +654,116 @@ header .logo img:hover {
   transform: translateY(-3px);
   box-shadow: 0 20px 44px rgba(92, 184, 92, 0.18);
 }
+/* Small tablets and large phones (portrait tablets / landscape phones) */
+@media (max-width: 1024px) and (min-width: 561px) {
+  .home-reviews {
+    padding: 18px 5%;
+    border-radius: 12px;
+  }
 
+  .home-reviews-inner { padding: 0 6px; }
+
+  /* Slightly tighter grid and spacing for tablets */
+  .home-reviews-grid {
+    gap: 2.5rem;
+    /* grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 0.8rem; */
+  }
+
+  .home-review-card {
+    grid-template-columns: 92px 1fr;
+    padding: 0.85rem;
+    gap: 2rem;
+    /* align-items: start; */
+    height: 260px;
+    width: 560px; /* remove fixed height so content wraps naturally */
+  }
+
+  .home-review-media {
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+  }
+
+  .home-review-name { font-size: 1rem; }
+  .home-review-text { font-size: 0.96rem; line-height: 1.55; }
+  .home-reviews-cta { margin-top: 2.8rem; }
+}
+
+/* Phones and small screens (mobile-first adjustments) */
+@media (max-width: 560px) {
+  .home-reviews {
+    padding: 14px 5%;
+    border-radius: 10px;
+    margin: 1rem 0;
+  }
+
+  .home-reviews-inner { padding: 0 4px; }
+
+  /* Single column stack on phones */
+  .home-reviews-grid {
+    /* grid-template-columns: 1fr; */
+    gap: 0.95rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Stack the image above the text for better mobile reading */
+  .home-review-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0.6rem;
+    align-items: start;
+    padding: 0.85rem;
+    height: auto; /* ensure flexible height for varied text */
+  }
+
+  .home-review-media {
+    width: 100%;
+    height: 160px; /* taller hero image feel on mobile */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .home-review-media img { width: 100%; height: 100%; object-fit: cover; }
+
+  .home-review-body { padding: 0 4px; text-align: left; }
+  .home-review-name { font-size: 1.02rem; margin-top: 0.15rem; }
+  .home-review-date { font-size: 0.85rem; }
+  .home-review-text { font-size: 0.96rem; line-height: 1.6; margin-top: 0.25rem; }
+
+  /* Make CTA button larger/touch-friendly on mobile */
+  .home-reviews-cta { margin-top: 1.8rem; }
+  .home-reviews-btn {
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  /* Reduce box-shadow intensity to keep visual crispness */
+  .home-review-card { box-shadow: 0 8px 18px rgba(0,0,0,0.06); }
+}
+
+/* Tiny devices (very small phones) — ensure min tappable area and readable text */
+@media (max-width: 360px) {
+  .home-review-media { height: 140px; }
+  .home-review-name { font-size: 1rem; }
+  .home-review-text { font-size: 0.95rem; }
+  .home-reviews-btn { padding: 11px 16px; }
+}
 /* responsive */
-@media (min-width: 760px) {
+/* @media (min-width: 760px) {
   .home-reviews-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .home-review-card {
     grid-template-columns: 100px 1fr;
   }
-}
+} */
+
 
 /* reuse reveal stagger animation if present; otherwise fallback */
 .reveal {
@@ -758,11 +867,17 @@ header .logo img:hover {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 561px) {
   .footer-container {
     text-align: center;
   }
   .footer-socials a {
     margin: 0 0.5rem;
   }
+}
+@media (max-width: 1024px) and (min-width: 561px) {
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+}
 }
