@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNutrify</title>
+    <link rel="icon" href="/media/Lg.png" type="image/png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/popup1.css" />
+    <link rel="stylesheet" href="/src/aboutme.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Hamburger Menu (Mobile Only) -->
+      <div class="menu-btn"><i class="fas fa-bars"></i></div>
+      <div class="logo">
+        <a href="/index.html">
+          <img class="logo-img" src="/media/Lg.png" alt="" />
+        </a>
+      </div>
+      <nav class="nav-bar">
+        <span class="close-btn">&times;</span>
+        <a href="/src/aboutme.html">About Me</a>
+        <a href="/src/reviews.html">Reviews</a>
+        <a href="">Case Study</a>
+        <a href="">Blog</a>
+        <!-- Mobile Social Links -->
+        <div class="mobile-social">
+          <a
+            href="https://youtube.com/@ab_s_dental_aesthetics?si=SgtQN4DUEie_k_gW"
+            target="_blank"
+            aria-label="YouTube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/swathi_dietitian?igsh=bWdkMno5dzhzYXpy"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://x.com/AbsDental6"
+            target="_blank"
+            aria-label="Twitter"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100089572597140"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </div>
+      </nav>
+      <!-- Desktop Social Links -->
+      <div class="social">
+        <a
+          href="https://youtube.com/@ab_s_dental_aesthetics?si=SgtQN4DUEie_k_gW"
+          target="_blank"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/swathi_dietitian?igsh=bWdkMno5dzhzYXpy"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://x.com/AbsDental6" target="_blank" aria-label="Twitter"
+          ><i class="fab fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100089572597140"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+    </header>
+    <main>
+      <!-- About Hero -->
+      <section
+        class="about-hero container reveal about-reveal"
+        aria-labelledby="about-hero-title"
+      >
+        <div class="about-hero-grid">
+          <div class="about-hero-photo" aria-hidden="true">
+            <!-- local uploaded file path used as source -->
+            <img src="/media/Lg.png" alt="Swathi - Founder of BNutrify" />
+          </div>
+
+          <div class="about-hero-content">
+            <h1 id="about-hero-title">Hi — I’m Swathi, Founder of BNutrify</h1>
+            <p class="about-tagline">
+              Qualified Dietitian • MSc Nutrition & Dietetics — Andhra
+              University, Vizag
+            </p>
+            <p class="about-lead">
+              I build practical, sustainable nutrition plans using home-staple
+              foods and simple habits — so healthy living becomes effortless and
+              enjoyable. My focus areas include weight management, women's
+              gynaec health, and medical nutrition support for common health
+              conditions.
+            </p>
+
+            <div class="about-cta-row">
+              <button class="btn-primary" type="button" onclick="openPopup()">
+                Book a consultation
+              </button>
+              <a href="/src/reviews.html" class="btn-ghost">View Reviews</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story / Bio -->
+      <section
+        class="about-story container reveal about-reveal"
+        aria-labelledby="about-story-title"
+      >
+        <h2 id="about-story-title">My Approach</h2>
+        <p>
+          My approach is rooted in balanced meals, practical home-staple recipes
+          and small, sustainable habits. I believe nutrition should never feel
+          complicated — every plan at BNutrify is customised to your likes,
+          routine, allergies and health needs so following it becomes
+          effortless.
+        </p>
+
+        <div class="about-focus-grid">
+          <div class="about-focus-card">
+            <h3>Evidence-based & Practical</h3>
+            <p>
+              Combining clinical knowledge with simple, realistic solutions that
+              fit into your daily life.
+            </p>
+          </div>
+          <div class="about-focus-card">
+            <h3>Personalised Plans</h3>
+            <p>
+              Tailored to your preferences and medical needs — the plan should
+              suit you, not the other way around.
+            </p>
+          </div>
+          <div class="about-focus-card">
+            <h3>Long-term Consistency</h3>
+            <p>
+              Small habit changes that build confidence and sustainable progress
+              over time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section
+        class="about-services container reveal about-reveal"
+        aria-labelledby="about-services-title"
+      >
+        <h2 id="about-services-title">Services</h2>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">📝</div>
+            <h4>Personalized Diet Plans</h4>
+            <p>
+              Tailored meals based on your preferences, lifestyle & health
+              needs.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⚖️</div>
+            <h4>Weight Management</h4>
+            <p>
+              Sustainable weight loss or gain plans using simple home-staple
+              foods.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">💊</div>
+            <h4>Health Condition Plans</h4>
+            <p>
+              Support for diabetes, thyroid, PCOD/PCOS, gut health and
+              deficiencies.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🌸</div>
+            <h4>Women’s Gynaec Health</h4>
+            <p>
+              Nutrition for hormonal balance, fertility, periods and menopause.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🌿</div>
+            <h4>Lifestyle & Habit Coaching</h4>
+            <p>
+              Mindful eating, stress management, hydration and sleep strategies.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🛒</div>
+            <h4>Grocery & Recipe Guides</h4>
+            <p>
+              Simple, home-friendly recipes and grocery guidance for everyday
+              cooking.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📈</div>
+            <h4>Follow-Ups & Progress Tracking</h4>
+            <p>
+              Consistent tracking, regular check-ins and plan updates based on
+              progress.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Certifications / Education (simple list) -->
+      <section
+        class="about-certs container reveal about-reveal"
+        aria-labelledby="about-certs-title"
+      >
+        <h2 id="about-certs-title">Certifications & Education</h2>
+        <ul class="cert-list">
+          <li>
+            <strong>MSc — Nutrition & Dietetics</strong>, Andhra University,
+            Vizag
+          </li>
+          <li>
+            Registered Dietitian (credential / local registry — update if
+            required)
+          </li>
+          <li>
+            Continuing education: clinical nutrition, women's health courses
+          </li>
+        </ul>
+      </section>
+
+      <!-- Small testimonial CTA -->
+      <section
+        class="about-cta container reveal about-reveal"
+        aria-label="Book consultation"
+      >
+        <div class="about-cta-inner">
+          <h3>Ready to start your journey?</h3>
+          <p class="lead">
+            Book a consultation and get a personalised plan built around your
+            life.
+          </p>
+          <div class="about-cta-actions">
+            <button class="btn-primary" type="button" onclick="openPopup()">
+              Book Consultation
+            </button>
+            <a class="btn-ghost" href="/src/reviews.html"
+              >Read client stories</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Brand Info -->
+        <div class="footer-about">
+          <img src="/media/Lg.png" alt="BNutrify Logo" class="footer-logo" />
+          <!-- <p>
+        Empowering individuals to achieve better health and confidence through
+        expert nutrition, education, and self-belief. Live healthier, live happier,
+        live with <strong>BNutrify</strong>.
+      </p> -->
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/src/about.html">About</a></li>
+            <li><a href="/src/services.html">Services</a></li>
+            <li><a href="/src/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p>
+            Email:
+            <a href="mailto:swathibuddha3@gmail.com">swathibuddha3@gmail.com</a>
+          </p>
+          <p>Phone: <a href="tel:+919876543210">+91 73960 16231</a></p>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 BNutrify. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <div id="popup-container"></div>
+    <script src="/src/script.js"></script>
+    <script src="/src/popup1.js"></script>
+    <script src="/src/aboutme.js"></script>
+  </body>
+</html>
