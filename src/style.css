@@ -58,8 +58,8 @@ header .logo img:hover {
 }
 
 /* Navigation Bar */
-.mobile-social{
-    display: none;
+.mobile-social {
+  display: none;
 }
 .nav-bar {
   display: flex;
@@ -120,7 +120,6 @@ header .logo img:hover {
   transform: scale(1.2);
 }
 
-
 /* ========== MOBILE MENU OVERLAY ========== */
 @media (max-width: 900px) {
   header {
@@ -179,8 +178,8 @@ header .logo img:hover {
     transform: scale(1.15);
   }
   .nav-bar a:hover::after {
-  width: 0%;
-}
+    width: 0%;
+  }
 
   /* Close button inside overlay */
   .close-btn {
@@ -402,15 +401,14 @@ header .logo img:hover {
 }
 
 /* ========== Sec2 ========== */
-.hero-2 img{
+.hero-2 img {
   width: 100%;
 }
-
 
 /* === About Nutriewind Section === */
 .about-nutriewind {
   background-color: var(--accent-color);
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .about-content {
@@ -444,7 +442,6 @@ header .logo img:hover {
   color: #333;
 }
 
-
 /* Responsive Tweaks */
 @media (min-width: 768px) {
   .about-content h2 {
@@ -461,11 +458,7 @@ header .logo img:hover {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(
-    135deg,
-    var(--accent-color) 0%,
-    #f9fff9 100%
-  );
+  background: linear-gradient(135deg, var(--accent-color) 0%, #f9fff9 100%);
   padding: 3rem 6%;
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -552,6 +545,126 @@ header .logo img:hover {
   }
 }
 
+/* Home reviews preview (2 cards) */
+.home-reviews {
+  padding: 10px 40px;
+  background: linear-gradient(180deg, rgba(92, 184, 92, 0.03), transparent);
+  margin-top: 1.6rem;
+  border-radius: 12px;
+}
+
+.home-reviews-inner {
+  margin: 0 auto;
+  text-align: center;
+}
+.home-reviews h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+}
+.home-reviews-lead {
+  color: #5a6b5a;
+  margin-bottom: 1.2rem;
+  font-size: 0.98rem;
+}
+
+/* grid */
+.home-reviews-grid {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+/* card */
+.home-review-card {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  align-items: center;
+  background: var(--white);
+  padding: 0.9rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.home-review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.home-review-media {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f7faf7;
+}
+.home-review-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-review-name {
+  font-size: 0.98rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.1rem;
+  font-weight: 700;
+}
+.home-review-date {
+  display: block;
+  color: #7a7a7a;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+.home-review-text {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* CTA button */
+.home-reviews-cta {
+  margin-top: 1.5rem;
+}
+.home-reviews-btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.65rem 1.05rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(92, 184, 92, 0.14);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.home-reviews-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(92, 184, 92, 0.18);
+}
+
+/* responsive */
+@media (min-width: 760px) {
+  .home-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home-review-card {
+    grid-template-columns: 100px 1fr;
+  }
+}
+
+/* reuse reveal stagger animation if present; otherwise fallback */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
 /* ========== FOOTER ========== */
 .footer {

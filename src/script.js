@@ -40,3 +40,28 @@ function showAppointment() {
   payment.style.display = "none";
   form.style.display = "block";
 }
+
+// Reveal home small preview cards with a stagger (call this after DOMContentLoaded)
+(function revealHomePreview(){
+  const homeCards = document.querySelectorAll('.home-review-card');
+  if (!homeCards.length) return;
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const all = Array.from(homeCards);
+          all.forEach((card, idx) => {
+            // small stagger while preserving order
+            card.style.transitionDelay = (idx * 0.12) + 's';
+            card.classList.add('reveal','visible');
+          });
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.12 });
+    io.observe(homeCards[0]);
+  } else {
+    homeCards.forEach((c,i) => { c.style.transitionDelay = (i*0.12)+'s'; c.classList.add('reveal','visible'); });
+  }
+})();
