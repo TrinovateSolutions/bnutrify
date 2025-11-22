@@ -43,8 +43,8 @@ function fillTimeSlots() {
     return;
   }
 
-  const start = 9 * 60; // 9 AM in minutes
-  const end = 18 * 60; // 6 PM
+  const start = 10 * 60; // 9 AM in minutes
+  const end = 24 * 60; // 12 AM
   const interval = 45; // minutes
 
   for (let mins = start; mins < end; mins += interval) {

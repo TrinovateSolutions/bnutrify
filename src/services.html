@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNutrify</title>
+    <link rel="icon" href="/media/Lg.jpeg" type="image/jpeg" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/popup1.css" />
+    <link rel="stylesheet" href="/src/services.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Hamburger Menu (Mobile Only) -->
+      <div class="menu-btn"><i class="fas fa-bars"></i></div>
+      <div class="logo">
+          <img class="logo-img" src="/media/Lg.jpeg" alt="" />
+
+      </div>
+      <nav class="nav-bar">
+        <span class="close-btn">&times;</span>
+        <a href="/index.html">Home</a>
+        <a href="/src/aboutme.html">About Me</a>
+        <a href="/src/reviews.html">Reviews</a>
+        <a href="/src/services.html">Services</a>
+        <a href="/src/blog.html">Blog</a>
+        <!-- Mobile Social Links -->
+        <div class="mobile-social">
+          <a
+            href="https://www.instagram.com/swathi_dietitian?igsh=bWdkMno5dzhzYXpy"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/share/1BgZS45XnW/"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.linkedin.com/company/bnutrify/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </nav>
+      <!-- Desktop Social Links -->
+      <div class="social">
+       <a
+            href="https://www.instagram.com/swathi_dietitian?igsh=bWdkMno5dzhzYXpy"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/share/1BgZS45XnW/"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.linkedin.com/company/bnutrify/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i
+          ></a>
+      </div>
+    </header>
+<main>
+  <!-- Services Hero -->
+  <section class="services-hero container reveal" aria-labelledby="services-hero-title">
+    <div class="services-hero-grid">
+      <div class="services-hero-media" aria-hidden="true">
+        <img src="" alt="Healthy plate and groceries — BNutrify services" />
+      </div>
+
+      <div class="services-hero-content">
+        <h1 id="services-hero-title">Services at BNutrify</h1>
+        <p class="services-lead">
+          Evidence-led, practical nutrition support — tailored to real lives. From customised meal plans to women's health, we focus on simplicity, sustainability and measurable progress.
+        </p>
+        <p class="services-blurb">
+          Every service is personalised — built around your food preferences, medical needs, daily routine and goals. We prioritise home-staple foods, realistic habits and consistent follow-up.
+        </p>
+
+        <div class="services-cta">
+          <button class="btn-primary" type="button" onclick="openPopup()">Book a consultation</button>
+          <a class="btn-ghost" href="/src/reviews.html">View Reviews</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-list container reveal" aria-labelledby="services-list-title">
+    <h2 id="services-list-title">Core Services</h2>
+    <p class="muted-lead">Practical packages and a-la-carte options to support weight, medical conditions and women's health.</p>
+
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">📝</div>
+        <div class="service-body">
+          <h3>Personalized Diet Plans</h3>
+          <p>Custom meal plans tailored to preferences, schedule and health needs — with easy, home-friendly recipes and grocery lists.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">⚖️</div>
+        <div class="service-body">
+          <h3>Weight Management</h3>
+          <p>Sustainable, stepwise plans for weight loss or gain focused on behaviour change and consistent progress rather than quick fixes.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">💊</div>
+        <div class="service-body">
+          <h3>Health Condition Plans</h3>
+          <p>Medical nutrition therapy for diabetes, thyroid issues, PCOD/PCOS, gut conditions and nutritional deficiencies with evidence-based modifications.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">🌸</div>
+        <div class="service-body">
+          <h3>Women’s Gynaec Health</h3>
+          <p>Targeted nutrition for hormonal balance, menstrual health, fertility support and menopause management with practical meal strategies.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">🌿</div>
+        <div class="service-body">
+          <h3>Lifestyle & Habit Coaching</h3>
+          <p>Mindful eating, sleep hygiene, hydration and stress-eating strategies to build resilient, long-term habits.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">🛒</div>
+        <div class="service-body">
+          <h3>Grocery & Recipe Guides</h3>
+          <p>Practical shopping lists, batch-cooking methods and simple recipes that make healthy eating frictionless at home.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">📈</div>
+        <div class="service-body">
+          <h3>Follow-Ups & Progress Tracking</h3>
+          <p>Structured follow-ups, meal-level tracking and data-driven plan tweaks to ensure steady, measurable improvement.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Packages / How it works -->
+  <section class="services-works container reveal" aria-labelledby="services-works-title">
+    <h2 id="services-works-title">How it works</h2>
+
+    <ol class="how-steps">
+      <li>
+        <strong>Step 1 — Deep Understanding</strong>
+        <p>Comprehensive intake covering history, routine, food preferences and health conditions.</p>
+      </li>
+      <li>
+        <strong>Step 2 — Personalized Plan</strong>
+        <p>A realistic, flexible plan built around your life — includes recipes, grocery lists and habit targets.</p>
+      </li>
+      <li>
+        <strong>Step 3 — Track & Improve</strong>
+        <p>Regular check-ins and dynamic modifications so the plan evolves with your progress.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="services-contact container reveal" aria-label="Start now">
+    <div class="services-contact-inner">
+      <h3>Ready to begin?</h3>
+      <p class="lead">Book a short consultation and get a personalized starter plan to begin within days.</p>
+      <div class="services-contact-actions">
+        <button class="btn-primary" type="button" onclick="openPopup()">Book Now</button>
+        <a class="btn-ghost" href="/src/contact.html">Ask a question</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+      <div class="footer-container">
+        <!-- Brand Info -->
+        <div class="footer-about">
+          <img src="/media/Lg.jpeg" alt="BNutrify Logo" class="footer-logo" />
+          <p>
+        Empowering individuals to achieve better health and confidence through
+        expert nutrition, education, and self-belief. Live healthier, live happier,
+        live with <strong>BNutrify</strong>.
+      </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/src/aboutme.html">About Me</a></li>
+            <li><a href="/src/reviews.html">Reviews</a></li>
+            <li><a href="/src/services.html">Services</a></li>
+            <li><a href="/src/blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p>
+            Email:
+            <a href="mailto:swathibuddha3@gmail.com">swathibuddha3@gmail.com</a>
+          </p>
+          <p>Phone: <a href="tel:+919876543210">+91 73960 16231</a></p>
+          <div class="footer-socials">
+            <a
+            href="https://www.instagram.com/swathi_dietitian?igsh=bWdkMno5dzhzYXpy"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/share/1BgZS45XnW/"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.linkedin.com/company/bnutrify/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i
+          ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 BNutrify. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <div id="popup-container"></div>
+    <script src="/src/script.js"></script>
+    <script src="/src/popup1.js"></script>
+  </body>
+</html>

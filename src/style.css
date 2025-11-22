@@ -786,16 +786,24 @@ header .logo img:hover {
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: space-around;
   gap: 2rem;
   padding: 0 6% 2rem;
+}
+.footer-about, .footer-links,.footer-contact{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Brand / About */
 .footer-logo {
   width: 150px;
   margin-bottom: 1rem;
+  margin-right: 40px;
 }
 .footer-about p {
   font-size: 0.95rem;
@@ -870,14 +878,34 @@ header .logo img:hover {
 @media (max-width: 561px) {
   .footer-container {
     text-align: center;
+      display: flex;
+  flex-direction: column;
+  align-items: center;
   }
   .footer-socials a {
     margin: 0 0.5rem;
+  }
+  .footer-about, .footer-links,.footer-contact{
+    width: 100%;
+  }
+  .footer-logo{
+    margin-right: 0;
   }
 }
 @media (max-width: 1024px) and (min-width: 561px) {
 .footer-container{
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
+  .footer-about, .footer-links,.footer-contact{
+    width: 33%;
+  }
+  .footer-about p,.footer-contact p{
+    font-size: 12px;
+    text-align: center;
+  }
+    .footer-logo{
+    margin-right: 0;
+  }
 }
