@@ -154,3 +154,17 @@ fetch("src/send_mail.php", {
     alert("Something went wrong while sending the email.");
   });
 }
+
+
+// after you send fetch(...) and parse response into "data" object:
+if (data && data.status === 'success') {
+  // close popup (existing)
+  closePopup();
+
+  // redirect the user to the success page
+  // Use relative path according to where you put success.html
+  window.location.href = "src/success.html"; // if you placed success.html in site root
+  // OR: window.location.href = "/src/success.html"; // if inside src/
+} else {
+  alert(data.message || "Submission failed. Please try again.");
+}

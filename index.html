@@ -282,6 +282,62 @@
           </button>
         </div>
       </section>
+      <!-- Feedback Section (Rating + Message) -->
+<section id="feedback-section" class="feedback-section" aria-labelledby="feedback-title">
+  <div class="feedback-inner container">
+    <div class="feedback-card">
+      <!-- <div class="feedback-visual" aria-hidden="true">
+        <img src="" alt="" />
+      </div> -->
+
+      <form id="feedbackForm" class="feedback-form" novalidate>
+        <h2 id="feedback-title">Share your feedback</h2>
+        <p class="feedback-lead">Tell us how we did — your rating helps others, and your message helps us improve.</p>
+
+        <label class="field">
+          <span class="label">Your name</span>
+          <input type="text" id="fb-name" name="name" placeholder="Your name" required />
+        </label>
+
+        <label class="field">
+          <span class="label">Email</span>
+          <input type="email" id="fb-email" name="email" placeholder="you@example.com" required />
+        </label>
+
+        <fieldset class="rating-group" aria-label="Rating">
+          <legend class="label">Rating</legend>
+          <div class="stars" role="radiogroup" aria-labelledby="rating-legend">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5" title="5 stars">★</label>
+
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 stars">★</label>
+
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 stars">★</label>
+
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 stars">★</label>
+
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 star">★</label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span class="label">Message</span>
+          <textarea id="fb-message" name="message" rows="5" placeholder="Tell us what worked and what we can improve..." required></textarea>
+        </label>
+
+        <div class="feedback-actions">
+          <button type="submit" class="btn-primary" id="fb-submit">Send Feedback</button>
+          <div id="fb-status" class="fb-status" role="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
     </main>
     <footer class="footer">
       <div class="footer-container">
