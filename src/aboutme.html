@@ -65,194 +65,192 @@
           ></a>
       </div>
     </header>
-    <main>
-      <!-- About Hero -->
-      <section
-        class="about-hero container reveal about-reveal"
-        aria-labelledby="about-hero-title"
-      >
+    <main class="about-page">
+      <!-- HERO: Image LEFT, Text RIGHT -->
+      <section class="about-hero reveal" aria-labelledby="about-hero-title">
         <div class="about-hero-grid">
-          <div class="about-hero-photo" aria-hidden="true">
-            <!-- local uploaded file path used as source -->
-            <img src="/media/Lg.png" alt="Swathi - Founder of BNutrify" />
+          <div class="about-hero-photo hero-media" aria-hidden="true">
+            <!-- using uploaded image path (rounded rectangle via CSS) -->
+            <img src="/mnt/data/adbba58f-1256-44a5-a7e4-b42eecd518d4.png" alt="Swathi — Dietitian & Founder of BNutrify" />
           </div>
 
-          <div class="about-hero-content">
-            <h1 id="about-hero-title">Hi — I’m Swathi, Founder of BNutrify</h1>
-            <p class="about-tagline">
-              Qualified Dietitian • MSc Nutrition & Dietetics — Andhra
-              University, Vizag
-            </p>
-            <p class="about-lead">
-              I build practical, sustainable nutrition plans using home-staple
-              foods and simple habits — so healthy living becomes effortless and
-              enjoyable. My focus areas include weight management, women's
-              gynaec health, and medical nutrition support for common health
-              conditions.
+          <div class="about-hero-content hero-content">
+            <h1 id="about-hero-title">Hello — I’m Swathi, Dietitian & Founder of BNutrify</h1>
+            <p class="about-tagline">I make nutrition simple, sustainable and easy to follow for real life.</p>
+
+            <p class="about-intro">
+              I created BNutrify with one purpose: to help people adopt practical, evidence-based nutrition using balanced meals and home-staple foods that fit naturally into busy routines. My approach blends science, empathy and real-life practicality so healthy habits are sustainable.
             </p>
 
             <div class="about-cta-row">
-              <button class="btn-primary" type="button" onclick="openPopup()">
-                Book a consultation
-              </button>
-              <a href="/src/reviews.html" class="btn-ghost">View Reviews</a>
+              <button class="btn-primary" onclick="openPopup()">Book a consultation</button>
+              <a class="btn-ghost" href="/src/services.html">Explore Services</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Story / Bio -->
-      <section
-        class="about-story container reveal about-reveal"
-        aria-labelledby="about-story-title"
-      >
-        <h2 id="about-story-title">My Approach</h2>
-        <p>
-          My approach is rooted in balanced meals, practical home-staple recipes
-          and small, sustainable habits. I believe nutrition should never feel
-          complicated — every plan at BNutrify is customised to your likes,
-          routine, allergies and health needs so following it becomes
-          effortless.
-        </p>
+      <!-- Education -->
+      <section class="about-section reveal" aria-labelledby="education-title">
+        <div class="container">
+          <h2 id="education-title">My Educational Background</h2>
 
-        <div class="about-focus-grid">
-          <div class="about-focus-card">
-            <h3>Evidence-based & Practical</h3>
-            <p>
-              Combining clinical knowledge with simple, realistic solutions that
-              fit into your daily life.
-            </p>
+          <div class="edu-grid">
+            <article class="edu-card">
+              <h3>🎓 M.Sc — Food, Nutrition & Dietetics</h3>
+              <p class="muted">Andhra University, Vizag — full-time, on-campus</p>
+              <p>
+                A rigorous program in clinical nutrition, medical diet therapy and diet planning. The on-campus format gave me strong academic grounding and hands-on clinical exposure.
+              </p>
+            </article>
+
+            <article class="edu-card">
+              <h3>🎓 B.Sc — Food Technology</h3>
+              <p class="muted">GITAM University, Vizag</p>
+              <p>
+                My undergraduate training covered food composition, safety, processing and quality — enabling me to create meal plans that are both nutritious and practical.
+              </p>
+            </article>
           </div>
-          <div class="about-focus-card">
-            <h3>Personalised Plans</h3>
+        </div>
+      </section>
+
+      <!-- Clinical experience -->
+      <section class="about-section reveal" aria-labelledby="clinical-title">
+        <div class="container">
+          <h2 id="clinical-title">Clinical Experience</h2>
+
+          <div class="clinical-card">
+            <h3>🏥 45-Day Clinical Internship — Omni RK Hospital, Vizag</h3>
+            <p class="muted">M.Sc — Second year internship (adult & pediatric wards)</p>
             <p>
-              Tailored to your preferences and medical needs — the plan should
-              suit you, not the other way around.
-            </p>
-          </div>
-          <div class="about-focus-card">
-            <h3>Long-term Consistency</h3>
-            <p>
-              Small habit changes that build confidence and sustainable progress
-              over time.
+              I worked across adult and pediatric wards, supporting therapeutic diets and managing cases related to lifestyle disorders, metabolic conditions and pediatric nutrition. This clinical exposure shaped my patient-centered, evidence-led approach.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Services -->
-      <!-- <section
-        class="about-services container reveal about-reveal"
-        aria-labelledby="about-services-title"
-      >
-        <h2 id="about-services-title">Services</h2>
+      <!-- Holistic learning -->
+      <section class="about-section reveal" aria-labelledby="yoga-title">
+        <div class="container">
+          <h2 id="yoga-title">Holistic Learning</h2>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon">📝</div>
-            <h4>Personalized Diet Plans</h4>
+          <div class="edu-card">
+            <h3>🧘‍♀️ Diploma in Yoga (6 months — offline)</h3>
+            <p class="muted">Integration of mindfulness, movement & balance</p>
             <p>
-              Tailored meals based on your preferences, lifestyle & health
-              needs.
+              Complementary training in yoga taught me to include mindfulness and movement strategies into nutrition plans — supporting mental wellbeing alongside food-based changes.
             </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">⚖️</div>
-            <h4>Weight Management</h4>
-            <p>
-              Sustainable weight loss or gain plans using simple home-staple
-              foods.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">💊</div>
-            <h4>Health Condition Plans</h4>
-            <p>
-              Support for diabetes, thyroid, PCOD/PCOS, gut health and
-              deficiencies.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🌸</div>
-            <h4>Women’s Gynaec Health</h4>
-            <p>
-              Nutrition for hormonal balance, fertility, periods and menopause.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🌿</div>
-            <h4>Lifestyle & Habit Coaching</h4>
-            <p>
-              Mindful eating, stress management, hydration and sleep strategies.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🛒</div>
-            <h4>Grocery & Recipe Guides</h4>
-            <p>
-              Simple, home-friendly recipes and grocery guidance for everyday
-              cooking.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">📈</div>
-            <h4>Follow-Ups & Progress Tracking</h4>
-            <p>
-              Consistent tracking, regular check-ins and plan updates based on
-              progress.
-            </p>
-          </article>
+          </div>
         </div>
-      </section> -->
-
-      <!-- Certifications / Education (simple list) -->
-      <section
-        class="about-certs container reveal about-reveal"
-        aria-labelledby="about-certs-title"
-      >
-        <h2 id="about-certs-title">Certifications & Education</h2>
-        <ul class="cert-list">
-          <li>
-            <strong>MSc — Nutrition & Dietetics</strong>, Andhra University,
-            Vizag
-          </li>
-          <li>
-            Registered Dietitian
-          </li>
-          <li>
-            Continuing education: Clinical Nutrition, Women's health courses
-          </li>
-        </ul>
       </section>
 
-      <!-- Small testimonial CTA -->
-      <section
-        class="about-cta container reveal about-reveal"
-        aria-label="Book consultation"
-      >
-        <div class="about-cta-inner">
-          <h3>Ready to start your journey?</h3>
-          <p class="lead">
-            Book a consultation and get a personalised plan built around your
-            life.
+      <!-- Continuous growth -->
+      <section class="about-section reveal" aria-labelledby="growth-title">
+        <div class="container">
+          <h2 id="growth-title">Continuous Growth</h2>
+          <p>
+            I regularly attend workshops, webinars and trainings to stay current with nutrition science. Ongoing learning allows me to guide clients responsibly and adapt plans based on the best available evidence.
           </p>
-          <div class="about-cta-actions">
-            <button class="btn-primary" type="button" onclick="openPopup()">
-              Book Consultation
-            </button>
-            <a class="btn-ghost" href="/src/reviews.html"
-              >Read client stories</a
-            >
-          </div>
         </div>
       </section>
+
+      <!-- Approach -->
+      <section class="about-section reveal" aria-labelledby="approach-title">
+        <div class="container">
+          <h2 id="approach-title">My Approach at BNutrify</h2>
+
+          <div class="approach-grid">
+            <div class="approach-card">
+              <h4>Sustainable</h4>
+              <p>Plans designed for long-term success, not short-term fixes.</p>
+            </div>
+
+            <div class="approach-card">
+              <h4>Home-food based</h4>
+              <p>Balanced meals using everyday ingredients and simple recipes.</p>
+            </div>
+
+            <div class="approach-card">
+              <h4>Easy to follow</h4>
+              <p>Practical adjustments that fit your routine and preferences.</p>
+            </div>
+
+            <div class="approach-card">
+              <h4>Tailored</h4>
+              <p>Every plan is customized to your medical needs, food likes/dislikes and lifestyle.</p>
+            </div>
+          </div>
+
+          <p class="approach-summary">
+            I combine academic training, clinical exposure and holistic practices to create plans that build consistency, confidence and long-term results without making you feel restricted.
+          </p>
+        </div>
+      </section>
+      <!-- Certificates — Horizontal Slider -->
+<section class="certs-section reveal" aria-labelledby="certs-title">
+  <div class="container">
+    <h2 id="certs-title">Certificates & Trainings</h2>
+    <!-- <p class="muted-lead">Selected certificates and course attendance. Tap any card to view a larger version (portrait-friendly).</p> -->
+
+    <div class="cert-slider" id="certSlider" role="list">
+      <!-- Card 1: image certificate (screenshot) -->
+      <article class="cert-card" role="listitem" data-src="/media/cert2.jpeg" data-type="image">
+        <div class="cert-thumb" aria-hidden="true">
+          <img src="/media/fssai.jpg" alt="FSSAI Labelling Certificate — Swathi" />
+        </div>
+        <div class="cert-meta">
+          <strong>FSSAI Labelling & Packaging <br> Certificate</strong>
+          <small>Issued: Oct 2025</small>
+          <div class="cert-actions">
+            <button class="btn-view" type="button" aria-label="View certificate">View certificate</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: PDF certificate (attendance PDF) -->
+      <article class="cert-card" role="listitem" data-src="/media/cert1.jpg" data-type="image">
+        <div class="cert-thumb" aria-hidden="true">
+          <!-- show a lightweight thumbnail; browsers can display the PDF in modal -->
+          <img src="/media/apollo logo.png" alt="Attendance certificate thumbnail" />
+        </div>
+        <div class="cert-meta">
+          <strong>Apollo Clinical Nutrition • Visakhapatnam</strong>
+          <small>Held: 2-3 Aug 2025 </small>
+          <div class="cert-actions">
+            <button class="btn-view" type="button" aria-label="View certificate">View certificate</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: another uploaded image (example png you uploaded earlier) -->
+      <!-- <article class="cert-card" role="listitem" data-src="/mnt/data/adbba58f-1256-44a5-a7e4-b42eecd518d4.png" data-type="image">
+        <div class="cert-thumb" aria-hidden="true">
+          <img src="/mnt/data/adbba58f-1256-44a5-a7e4-b42eecd518d4.png" alt="Training certificate" />
+        </div>
+        <div class="cert-meta">
+          <strong>Food Safety / Training <br> Certificate</strong>
+          <small>Issued: 2025</small>
+          <div class="cert-actions">
+            <button class="btn-view" type="button" aria-label="View certificate">View certificate</button>
+          </div>
+        </div>
+      </article> -->
+    </div>
+  </div>
+
+  <!-- Modal / Lightbox (created in DOM and controlled by JS) -->
+  <div id="certModal" class="cert-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cert-modal-backdrop" data-close></div>
+    <div class="cert-modal-panel" role="document">
+      <button class="cert-modal-close" aria-label="Close certificate">&times;</button>
+      <div class="cert-modal-content" id="certModalContent" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
     </main>
+
 <footer class="footer">
       <div class="footer-container">
         <!-- Brand Info -->

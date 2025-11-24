@@ -8,6 +8,7 @@
   --shadow-sm: 0 6px 18px rgba(0,0,0,0.06);
 }
 
+/* HERO */
 .reviews-hero {
   padding: 3rem var(--page-pad);
   text-align: center;
@@ -27,7 +28,7 @@
   line-height: 1.7;
 }
 
-/* Grid layout */
+/* Grid layout (KEEPING container width/padding untouched) */
 .reviews-grid {
   display: grid;
   gap: 1.25rem;
@@ -35,10 +36,8 @@
   grid-template-columns: 1fr;
 }
 
-/* Cards */
+/* Cards — keep width/size properties intact (no changes to card width) */
 .review-card {
-  /* display: grid;
-  grid-template-columns: 110px 1fr; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -49,7 +48,7 @@
   box-shadow: var(--shadow-sm);
   transform: translateY(8px);
   opacity: 0;
-  transition: transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .25s ease;
+  transition: transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .25s ease, opacity .45s ease;
 }
 
 .review-card:hover {
@@ -57,7 +56,7 @@
   box-shadow: 0 16px 40px rgba(0,0,0,0.08);
 }
 
-/* Media (image) */
+/* Media (image) — DO NOT change width/height values */
 .review-media {
   width: 200px;
   height: 200px;
@@ -95,6 +94,36 @@
   font-size: .98rem;
 }
 
+/* Review actions area (for video button and any future CTAs) */
+.review-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Video button */
+.btn-video {
+  background: linear-gradient(180deg, var(--primary), #4cae4c);
+  color: #fff;
+  border: 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(92,184,92,0.12);
+  transition: transform .14s ease, box-shadow .14s ease, opacity .14s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-video:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(92,184,92,0.18); }
+.btn-video:active { transform: translateY(0); }
+
+/* Small play icon inside button (uses fontawesome if available) */
+.btn-video i { font-size: 0.95rem; }
+
 /* CTA */
 .reviews-cta {
   padding: 2.2rem var(--page-pad);
@@ -116,7 +145,7 @@
 }
 .reviews-cta p { color: var(--muted); margin-bottom: .85rem; }
 
-/* Button (re-use style but keep local) */
+/* Button (local reuse) */
 .btn-primary {
   background: var(--primary);
   color: #fff;
@@ -130,12 +159,13 @@
 }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(92,184,92,0.18); }
 
-/* Responsive */
+/* Responsive layout — keep grid columns logic, no width property changes */
 @media (min-width: 700px) {
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 1100px) {
   .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Keep existing card sizing; do not modify width/height values */
   .review-card { grid-template-columns: 120px 1fr; }
 }
 
@@ -150,4 +180,92 @@
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ========================
+   VIDEO MODAL (PORTRAIT 9:16)
+   Scoped so it won't affect other pages.
+   ======================== */
+
+/* Overlay */
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2200;
+  padding: 20px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* Modal container keeps portrait aspect; does NOT change card/container widths */
+.video-modal {
+  width: 100%;
+  max-width: 420px;   /* safe default for desktop portrait */
+  aspect-ratio: 9 / 16;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .28s ease;
+  position: relative;
+}
+
+/* show state */
+.video-overlay.open .video-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Video element fills modal */
+.video-modal video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+/* Close button */
+.video-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 12;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: red;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor: pointer;
+}
+.video-close:hover { background: rgba(255,255,255,0.12); }
+
+/* Accessibility focus styles */
+.btn-video:focus,
+.video-close:focus { outline: 3px solid rgba(92,184,92,0.28); outline-offset: 2px; }
+
+/* Mobile adjustments: modal takes more vertical space but keep card widths unchanged */
+@media (max-width: 520px) {
+  .review-card { flex-direction: column; align-items: stretch; }
+  /* Keep review-media width/height intact when needed on larger viewports;
+     on mobile allow it to scale naturally while not editing original width vars */
+  .review-media { width: 100%; height: 220px; flex: 0 0 auto; border-radius: 12px; }
+  .video-modal { max-width: 360px; }
+}
+
+/* Reduced motion: disable transitions */
+@media (prefers-reduced-motion: reduce) {
+  .review-card, .video-modal, .video-overlay { transition: none !important; transform: none !important; opacity: 1 !important; }
 }
