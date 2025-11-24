@@ -109,19 +109,48 @@ function submitAppointment() {
   }
   formData.append("paymentProof", paymentProof);
 
-  // Send to PHP via AJAX
-  fetch("/src/send_mail.php", {
-    method: "POST",
-    body: formData
+//   // Send to PHP via AJAX
+//   fetch("/src/send_mail.php", {
+//     method: "POST",
+//     body: formData
+//   })
+//     .then((response) => response.text())
+//     .then((data) => {
+//       console.log("✅ Server Response:", data);
+//       alert(data);
+//       closePopup();
+//     })
+//     .catch((error) => {
+//       console.error("❌ Error:", error);
+//       alert("Something went wrong while sending the email.");
+//     });
+// }
+
+// Send to PHP via AJAX
+fetch("/src/send_mail.php", {
+  method: "POST",
+  body: formData
+})
+  .then((response) => {
+    // try to parse JSON even if server had warnings; fallback to text
+    return response.json().catch(() => response.text());
   })
-    .then((response) => response.text())
-    .then((data) => {
-      console.log("✅ Server Response:", data);
-      alert(data);
-      closePopup();
-    })
-    .catch((error) => {
-      console.error("❌ Error:", error);
-      alert("Something went wrong while sending the email.");
-    });
+  .then((data) => {
+    // data should be an object {status: 'success'|'error', message: '...'}
+    if (typeof data === 'object' && data.status) {
+      if (data.status === 'success') {
+        alert(data.message || 'Appointment submitted — thank you!');
+        closePopup();
+      } else {
+        alert(data.message || 'Server returned an error.');
+      }
+    } else {
+      // fallback raw text
+      alert(String(data));
+    }
+  })
+  .catch((error) => {
+    console.error("❌ Error:", error);
+    alert("Something went wrong while sending the email.");
+  });
 }
