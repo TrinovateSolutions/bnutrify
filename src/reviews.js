@@ -128,3 +128,29 @@ function closeVideoModal() {
     overlay.style.display = "none";
   }, 250);
 }
+
+
+// document.addEventListener('click', (e) => {
+//   const img = e.target.closest('.review-media img');
+//   if (!img) return;
+
+//   e.preventDefault();
+
+//   const card = img.closest('.review-card');
+//   if (!card) return;
+
+//   const videoUrl = card.dataset.video;
+//   if (videoUrl) openVideoModal(videoUrl);
+// });
+
+document.addEventListener("click", function (e) {
+  const media = e.target.closest(".video-thumb");
+  if (!media) return; // clicked non-video image
+
+  const card = media.closest(".review-card");
+  const videoUrl = card.dataset.video;
+
+  if (videoUrl) {
+    openVideoModal(videoUrl);
+  }
+});

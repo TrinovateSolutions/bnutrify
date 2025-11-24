@@ -5,20 +5,24 @@
   --muted: #666;
   --card-bg: #ffffff;
   --page-pad: 6%;
-  --shadow-sm: 0 6px 18px rgba(0,0,0,0.06);
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 /* HERO */
 .reviews-hero {
   padding: 3rem var(--page-pad);
   text-align: center;
-  background: linear-gradient(180deg, rgba(92,184,92,0.05), rgba(244,249,244,1));
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  background: linear-gradient(
+    180deg,
+    rgba(92, 184, 92, 0.05),
+    rgba(244, 249, 244, 1)
+  );
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 .reviews-hero h1 {
   color: var(--text);
   font-size: 1.85rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
 }
 .reviews-hero .lead {
@@ -48,12 +52,13 @@
   box-shadow: var(--shadow-sm);
   transform: translateY(8px);
   opacity: 0;
-  transition: transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .25s ease, opacity .45s ease;
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 0.25s ease, opacity 0.45s ease;
 }
 
 .review-card:hover {
   transform: translateY(0);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* Media (image) — DO NOT change width/height values */
@@ -63,7 +68,7 @@
   border-radius: 12px;
   overflow: hidden;
   flex: 0 0 200px;
-  background: linear-gradient(180deg,#f6f9f6,#fff);
+  background: linear-gradient(180deg, #f6f9f6, #fff);
   display: block;
 }
 .review-media img {
@@ -74,24 +79,26 @@
 }
 
 /* Content */
-.review-content { padding: 0; }
+.review-content {
+  padding: 0;
+}
 .review-name {
   font-size: 1rem;
   color: var(--text);
-  margin-bottom: .15rem;
+  margin-bottom: 0.15rem;
   font-weight: 700;
 }
 .review-date {
   display: inline-block;
   color: var(--muted);
-  font-size: .9rem;
-  margin-bottom: .6rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
 }
 .review-text {
   color: #444;
   line-height: 1.6;
-  margin-top: .5rem;
-  font-size: .98rem;
+  margin-top: 0.5rem;
+  font-size: 0.98rem;
 }
 
 /* Review actions area (for video button and any future CTAs) */
@@ -112,17 +119,24 @@
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(92,184,92,0.12);
-  transition: transform .14s ease, box-shadow .14s ease, opacity .14s ease;
+  box-shadow: 0 8px 20px rgba(92, 184, 92, 0.12);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.14s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
-.btn-video:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(92,184,92,0.18); }
-.btn-video:active { transform: translateY(0); }
+.btn-video:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(92, 184, 92, 0.18);
+}
+.btn-video:active {
+  transform: translateY(0);
+}
 
 /* Small play icon inside button (uses fontawesome if available) */
-.btn-video i { font-size: 0.95rem; }
+.btn-video i {
+  font-size: 0.95rem;
+}
 
 /* CTA */
 .reviews-cta {
@@ -133,40 +147,56 @@
 .reviews-cta .cta-inner {
   text-align: center;
   max-width: 900px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(248,255,248,0.9));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(248, 255, 248, 0.9)
+  );
   padding: 1.4rem;
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
 }
 .reviews-cta h2 {
   color: var(--text);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.25rem;
 }
-.reviews-cta p { color: var(--muted); margin-bottom: .85rem; }
+.reviews-cta p {
+  color: var(--muted);
+  margin-bottom: 0.85rem;
+}
 
 /* Button (local reuse) */
 .btn-primary {
   background: var(--primary);
   color: #fff;
-  padding: .7rem 1.2rem;
+  padding: 0.7rem 1.2rem;
   border: 0;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(92,184,92,0.16);
-  transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 6px 18px rgba(92, 184, 92, 0.16);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(92,184,92,0.18); }
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(92, 184, 92, 0.18);
+}
 
 /* Responsive layout — keep grid columns logic, no width property changes */
 @media (min-width: 700px) {
-  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 1100px) {
-  .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
   /* Keep existing card sizing; do not modify width/height values */
-  .review-card { grid-template-columns: 120px 1fr; }
+  .review-card {
+    grid-template-columns: 120px 1fr;
+  }
 }
 
 /* Scroll reveal helper (when .reveal class is toggled) */
@@ -191,7 +221,7 @@
 .video-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,15 +234,15 @@
 /* Modal container keeps portrait aspect; does NOT change card/container widths */
 .video-modal {
   width: 100%;
-  max-width: 420px;   /* safe default for desktop portrait */
+  max-width: 420px; /* safe default for desktop portrait */
   aspect-ratio: 9 / 16;
   background: #000;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   transform: translateY(8px);
   opacity: 0;
-  transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .28s ease;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.28s ease;
   position: relative;
 }
 
@@ -237,7 +267,7 @@
   right: 12px;
   top: 12px;
   z-index: 12;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   border: none;
   color: red;
   width: 36px;
@@ -245,27 +275,76 @@
   border-radius: 50%;
   font-size: 1.5rem;
   font-weight: bold;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-.video-close:hover { background: rgba(255,255,255,0.12); }
+.video-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
 
 /* Accessibility focus styles */
 .btn-video:focus,
-.video-close:focus { outline: 3px solid rgba(92,184,92,0.28); outline-offset: 2px; }
+.video-close:focus {
+  outline: 3px solid rgba(92, 184, 92, 0.28);
+  outline-offset: 2px;
+}
 
 /* Mobile adjustments: modal takes more vertical space but keep card widths unchanged */
 @media (max-width: 520px) {
-  .review-card { flex-direction: column; align-items: stretch; }
+  .review-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
   /* Keep review-media width/height intact when needed on larger viewports;
      on mobile allow it to scale naturally while not editing original width vars */
-  .review-media { width: 100%; height: 220px; flex: 0 0 auto; border-radius: 12px; }
-  .video-modal { max-width: 360px; }
+  .review-media {
+    width: 100%;
+    height: 220px;
+    flex: 0 0 auto;
+    border-radius: 12px;
+  }
+  .video-modal {
+    max-width: 360px;
+  }
 }
 
 /* Reduced motion: disable transitions */
 @media (prefers-reduced-motion: reduce) {
-  .review-card, .video-modal, .video-overlay { transition: none !important; transform: none !important; opacity: 1 !important; }
+  .review-card,
+  .video-modal,
+  .video-overlay {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+/* For cards with video */
+.video-thumb {
+  position: relative;
+  cursor: pointer;
+}
+
+.play-btn {
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.video-thumb:hover .play-btn {
+  transform: scale(1.12);
+  background: rgba(0,0,0,0.8);
 }
