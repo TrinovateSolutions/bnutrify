@@ -127,7 +127,7 @@ function submitAppointment() {
 // }
 
 // Send to PHP via AJAX
-fetch("/src/send_mail.php", {
+fetch("src/send_mail.php", {
   method: "POST",
   body: formData
 })
