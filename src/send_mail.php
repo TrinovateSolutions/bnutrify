@@ -1,6 +1,6 @@
 <?php
 // ==== CONFIGURATION ====
-$to = "mohankrishnagandepalli@gmail.com"; // 👈 change this to your email
+$to = "swathibuddha3@gmail.com"; // 👈 change this to your email
 $subject = "New Appointment Booking";
 
 // ==== VALIDATE INPUT ====
